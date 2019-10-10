@@ -1,11 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const DateDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        font-style: italic;
+        color: #C9A978;
+    };
+    p {
+        font-size: 1.4 rem;
+        text-align: center;
+    }
+`;
 
 const Body = props => {
     return (
-        <div>
-            <h3>Date: {props.date}</h3>
-            <p>Explanation: {props.exp}</p>
-        </div>
+        <DateDiv>
+            <h4>{props.date}</h4>
+            <p>{props.exp}</p>
+        </DateDiv>
     );
 };
 
